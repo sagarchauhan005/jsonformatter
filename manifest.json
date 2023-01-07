@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Json formatter (Inline)",
+  "version": "0.1",
+  "description": "A simple extension formats your json text by a simple right click",
+  "permissions": ["contextMenus", "scripting","activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "/images/icon.png",
+      "32": "/images/icon.png",
+      "48": "/images/icon.png",
+      "128": "/images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "/images/icon.png",
+    "32": "/images/icon.png",
+    "48": "/images/icon.png",
+    "128": "/images/icon.png"
+  }
+}
