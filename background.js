@@ -6,6 +6,7 @@ chrome.runtime.onInstalled.addListener(function() {
     });
 
     chrome.contextMenus.onClicked.addListener(function(info, tab) {
+        console.log("context menu was clicked");
         if (info.menuItemId === "format") {
             if (info.selectionText) {
                 let json = encodeURI(info.selectionText);
@@ -15,6 +16,8 @@ chrome.runtime.onInstalled.addListener(function() {
                     args: [json],
                 });
             }
+        }else{
+            console.log("something went wrong");
         }
     })
 });
