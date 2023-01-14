@@ -14,7 +14,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
     console.log("context menu was clicked");
     if (info.menuItemId === "format") {
         if (info.selectionText) {
-            let json = encodeURI(info.selectionText);
+            let json = encodeURI(info.selectionText.replace(/#/g, '%23'));
             chrome.scripting.executeScript({
                 target: {tabId: tab.id},
                 function: generateFormatUrl,

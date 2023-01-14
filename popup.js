@@ -7,7 +7,7 @@ format.addEventListener("click", async () => {
     if(tab){
         let text = document.getElementById('unformatted_string').value ?? null;
         if(text !==null){
-            text = encodeURI(text);
+            text = encodeURI(text.replace(/#/g, '%23'));
             chrome.scripting.executeScript({
                 target: { tabId: tab.id },
                 function: generateFormatUrl,
