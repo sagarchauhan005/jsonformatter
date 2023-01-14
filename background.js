@@ -26,10 +26,6 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
     }
 })
 
-// chrome.runtime.onInstalled.addListener(function() {
-//     initContextMenu();
-// });
-
 function generateFormatUrl(json) {
     // check if the url is a medium article
     let new_url = "https://jsonformatter.curiousconcept.com/?data="+json+"&process=true";
